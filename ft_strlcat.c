@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hiam <hiam@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: hhamoud <hhamoud@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/26 15:00:14 by hiam              #+#    #+#             */
-/*   Updated: 2022/12/06 17:01:30 by hiam             ###   ########.fr       */
+/*   Created: 2022/12/25 14:08:37 by hhamoud           #+#    #+#             */
+/*   Updated: 2022/12/28 21:20:12 by hhamoud          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	src_length;
 
 	i = 0;
+	if ((!dst || !src) && size == 0)
+		return (0);
 	src_length = ft_strlen(src);
 	dest_length = ft_strlen(dst);
 	j = dest_length;
